@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+    //内部函数
+    // function a(param){
+    //     function b(param1){
+    //         return param1+10;
+    //     }
+    //     return '在函数体内部调用b函数的结果为：'+b(param);
+    // }
+    // document.write(a(5));
+    // document.write(b(1));     //不能被调用，属于私有（内部）函数
+
+
+
+    //函数表记法
+    // function a(param) {
+    //     var b=function (param1) {
+    //         return param1+10;
+    //     }
+    //     return '在a函数体内调用b函数的结果是：'+b(param);
+    // }
+    // document.write(a(5));
+
+
+    // //返回函数的函数
+    // function a() {
+    //     alert('aaa');
+    //     return function () {
+    //         alert('bbbb');
+    //     }
+    // }
+    // var func=a();
+    // func();
+    // //上面两行和下面一行结果一样
+    // a()();
+
+
+
+    // //重写自己的函数      第一次可以用来做函数准备工作
+    // function a() {
+    //     alert('aaa');
+    //     a=function () {
+    //         alert('bbbb');
+    //     }
+    // }
+    // a();
+    // a();       //两次输出结果不同
+
+    //浏览器特性探测会用到下面的形式
+    var a=function () {
+        function setUp() {
+            var setup='doSomeThing';
+        }
+        function doWhat() {
+            alert('要执行的操作');
+        }
+        setUp();
+        return doWhat();
+    }();       //在函数后面直接加’（）；‘表示立即调用(自调用)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

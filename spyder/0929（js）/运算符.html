@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var i=3,j=8;
+        document.write(i+j);
+        document.write('<br/>');
+        document.write(i%j);
+        document.write('<br/>');
+        document.write(3%-8);
+        document.write('<br/>');
+        document.write(-3%-8);
+        document.write('<br/>');
+
+
+        //+比较特殊
+        document.write(i+'8')
+        document.write('<br/>');
+        document.write('2'+'8');
+        document.write('<br/>');
+        document.write(i+j+'3king');        //i+j是数字，遇见3king字符，就自动变成字符；；；；遵循从左到右的顺序，作为数字加完之后在变成字符
+        document.write('<br/>');
+        document.write(''+i);              //这样做可以将数字直接变成字符；；；；遵循从左到右的顺序
+        document.write(''+i+j+'3king');
+        document.write('<br/>');
+        //自增自减运算符  ++  --
+        // 前缀形式：先加一后运行
+        // 后缀形式:先执行后加一
+        //整型，浮点型,布尔类型支持自增自减运算符
+        var num1=1;
+        alert(num1++);
+        alert(++num1)
+        num1=true;
+        alert(--num1);
+        //字符串不支持自增自减
+        num1='3b';
+        alert(--num1);
+        //null支持自增自减
+        num1=null;
+        alert(--num1);
+        //undefined不支持
+        num1=undefined;
+        alert(--num1)
+
+
+        //三元运算符
+
+
+        //逗号运算符
+        var z=(n=1,m=2,p=3);//z的值为最后一个值
+        alert(z);
+        //void运算符
+        z=void(n=1,m=2,p=3);
+        alert(z);
+        //typeof   显示变量类型
+        var i=3;
+        alert(typeof i);
+        document.write('<hr color="red"/>')
+
+        i=4;
+        switch(i){
+            case 1:
+                document.write('aa');
+                break;
+            default:
+                document.write('<hr color="red"/>')
+                break;    //如果default的后面没有break，将会一直执行到break的语句那里
+            case 4:
+                document.write('vv');
+                break;
+        }
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

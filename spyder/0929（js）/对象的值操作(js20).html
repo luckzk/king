@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <script type="text/javascript">
+        var person={                                      //创建一个对象
+            username:'king',
+            age:21,
+            salary:1234.33,
+            addr:'北京',
+            sex:'male'
+        }
+        console.log('用户名为：'+person.username+'\n'+'性别为：'+person.sex);
+        console.log('薪水为:'+person['salary']);
+        //属性名不确定时，使用方括号，允许在程序运行期间进行调试
+        var key='username';
+        console.log(person.key);
+        console.log(person[key]);
+        console.log(person['key']);//加’‘相当于属性名字
+        
+        function PersonInfo(name,age,sex) {
+            this.name=name;
+            this.age=age;
+            this.sex=sex;
+        }
+        var person1=new PersonInfo('king','21','male');
+        console.log=(person1.name+person1['sex']);
+    </script>
+
+    </body>
+</html>
