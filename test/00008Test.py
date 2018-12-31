@@ -18,7 +18,7 @@ dl = re.findall(r'<ul>(.*?)</ul>',html,re.S)[0]
 
 chapter_info_list = re.findall(r'href="(.*?)">(.*?)<',dl)#反向捕获是什么，怎么用  #反向捕获就是捕捉（返回）括号里面的东西
 
-#循环每一个章节，分别下载
+# 循环每一个章节，分别下载
 for chapter_info in chapter_info_list:              #for循环用法
     chapter_url,chapter_title = chapter_info           #涉及到元组
     chapter_url = chapter_url.replace('" rel="bookmark','')
