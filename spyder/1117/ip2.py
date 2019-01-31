@@ -1,3 +1,4 @@
+#/usr/bin/env python
 # -*- coding: utf-8 -*-
 '''
 #intent      :
@@ -66,4 +67,4 @@ def exec(url,pagenum,timeout):
 
 if __name__ == '__main__':
     #exec(代理IP网页url,获取页数,超时设置)  每页是100条代理IP数据
-    exec(dlurl[0],10,0.3)
+    exec(dlurl[0],20,0.3)
