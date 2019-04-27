@@ -42,19 +42,19 @@ def get_text():
 
 text = get_text()
 
-auth_token = '39da920ec4f23a2a68baa9f547c8753d'   #去twilio.com注册账户获取token
-account_sid = 'ACff23cc74bcc50c1552b7f901bc659d50'
+auth_token = '***************************************'   #去twilio.com注册账户获取token
+account_sid = '****************************************'
 
 client = Client(account_sid,auth_token)
 
 
 def sent_message(phone_number):
     mes = client.messages.create(
-        from_='+18135364517',
+        from_='+1813*****',
         body=text,
         to=phone_number
     )
     print(mes.sid)
 
 print(text)
-sent_message("+8615938959075")
+sent_message("+86***********")
