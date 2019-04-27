@@ -56,5 +56,5 @@ def sent_message(phone_number):
     )
     print(mes.sid)
 
-
+print(text)
 sent_message("+8615938959075")

@@ -11,7 +11,7 @@
 import requests
 from lxml import etree
 
-url =  "http://2018.ip138.com/ic.asp"
+url =  "https://blog.csdn.net/Gents_hu/article/details/86585317"
 headers = {"User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"}
 dlurl = [
         'https://www.xicidaili.com/wt/', # 国内http
@@ -67,4 +67,4 @@ def exec(url,pagenum,timeout):
 
 if __name__ == '__main__':
     #exec(代理IP网页url,获取页数,超时设置)  每页是100条代理IP数据
-    exec(dlurl[0],20,0.3)
+    exec(dlurl[0],10,0.3)

@@ -12,6 +12,7 @@
 from urllib import request
 import random
 import time
+import requests
 import _thread
 
 dlurl = [
@@ -59,7 +60,7 @@ def get_ip():
     result.sort()                                       #排序结果
     ip = random.choice(result)
     return ip
-
+    # print(ip)
 
 def start():
     blog_url_list = [
@@ -96,7 +97,14 @@ def start():
     print(proxy)
 
 
-
+# def new_start():
+#     proxies = {"http": "http://" + proxy}
+#     try:
+#         response = requests.get(url, headers=headers, proxies=proxies, timeout=timeut)
+#         if response.status_code == 200:
+#             return True
+#     except OSError:
+#         pass
 
 
 
@@ -114,8 +122,14 @@ def times(times):
         print('complete!')
 
 
-try:
-    while True:
-        start()
-except:
-    print("出问题了！请重新尝试或优化代码。")
+# try:
+#     while True:
+#         start()
+# except:
+#     print("出问题了！请重新尝试或优化代码。")
+
+# while True:
+#     start()
+
+# times(1000)
+start()
